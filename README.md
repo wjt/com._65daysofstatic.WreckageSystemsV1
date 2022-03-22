@@ -19,3 +19,9 @@ Usage
 ```bash
 flatpak-builder --install --force-clean --user _app com._65daysofstatic.WreckageSystemsV1.yaml
 ```
+
+License
+-------
+
+The stuff in this repo is licensed under the MIT License. See [COPYING](./COPYING) for details. This does not cover the Wreckage Systems software itself.
+
