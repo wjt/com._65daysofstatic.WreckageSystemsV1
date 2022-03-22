@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Wreckage Systems V1 Archive
+Exec=wreckage-systems-v1
+Terminal=false
+Type=Application
+Icon=wreckage-systems-v1
+# No dice! No idea why!
+#StartupWMClass=Wreckage Systems V1 Archive.x86_64
+#StartupNotify=true
+Comment=The First year of Wreckage
+Categories=Game;Music;

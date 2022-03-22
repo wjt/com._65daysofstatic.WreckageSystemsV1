@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /app/"Wreckage Systems V1 Archive.x86_64" "$@"

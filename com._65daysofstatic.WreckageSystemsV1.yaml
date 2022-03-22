@@ -1,0 +1,38 @@
+id: com._65daysofstatic.WreckageSystemsV1
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+command: wreckage-systems-v1
+separate-locales: false
+rename-icon: wreckage-systems-v1
+build-options:
+  strip: false
+  no-debuginfo: true
+finish-args:
+  - --device=dri
+  - --device=shm
+  - --socket=pulseaudio
+  # Tried passing -force-wayland, nope, never mind
+  - --socket=x11
+modules:
+  - name: WreckageSystemsV1
+    sources:
+      - type: archive
+        path: "Wreckage Systems V1 Archive-linux.zip"
+        sha512: 'f53129dacc486465197f019ef956ed77a6e8a63789689b0dd62987fcb592dee167393ca491922c118e434af53575e708d542c8db833691bff9325cf576b72f7f'
+      - type: file
+        path: com._65daysofstatic.WreckageSystemsV1.desktop
+      - type: file
+        path: wreckage-systems-v1
+    buildsystem: simple
+    build-commands:
+      - find -name '._.DS_Store' -delete
+      # TODO: split .debug files after all?
+      - cp -a "Wreckage Systems V1 Archive.x86_64" "Wreckage Systems V1 Archive_Data" UnityPlayer_s.debug UnityPlayer.so LinuxPlayer_s.debug /app
+      - install -D -t /app/share/icons/hicolor/48x48/apps icons/hicolor/48x48/apps/wreckage-systems-v1.png
+      - install -D -t /app/share/applications com._65daysofstatic.WreckageSystemsV1.desktop
+      - install -D -t /app/bin/ wreckage-systems-v1
+
+
+
+
